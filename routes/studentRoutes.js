@@ -13,8 +13,8 @@ const { createStudent,
 
 // Protected Route
 router.post("/", authenticate, authorize("admin", "teacher"), validateStudent, createStudent);
-router.get("/", authenticate, authorize("admin", "teacher"), validateStudent, getStudents);
+router.get("/", authenticate, authorize("admin", "teacher"),  getStudents);
 router.put("/:id", authenticate, authorize("admin", "teacher"), validateStudent, updateStudent);
-router.delete("/:id", authenticate, authorize("admin"), validateStudent, deleteStudent);
+router.delete("/:id", authenticate, authorize("admin", "teacher"),  deleteStudent);
 
 module.exports = router;

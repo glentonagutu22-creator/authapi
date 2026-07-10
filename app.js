@@ -3,8 +3,9 @@ const express = require("express");
 const authRoutes = require("./routes/authRoutes");
 const studentRoutes = require("./routes/studentRoutes");
 const errorHandler = require("./middleware/errorHandler");
-
+const cors = require("cors");
 const app = express();
+app.use(cors());
 
 app.use(express.json());
 
