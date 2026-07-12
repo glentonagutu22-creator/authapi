@@ -9,6 +9,7 @@ const validateStudent = [
   body("admissionNumber")
     .trim()
     .notEmpty()
+    .isNumeric()
     .withMessage("Admission Number is required"),
 
   body("course")
